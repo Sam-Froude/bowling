@@ -7,7 +7,7 @@ describe 'bowling score' do
 		expect(bowling.score(nil)).to be_nil
 	end
 
-	it 'returns 0 if given no rolls' do
+	it 'returns 0 if given an empty string' do
 		bowling = Bowling.new
 		expect(bowling.score("")).to be_zero
 	end
@@ -23,4 +23,15 @@ describe 'bowling score' do
 		bowling = Bowling.new
 		expect(bowling.score("X")).to eq(10)
 	end
+	it 'returns 10 when provided with 
+		a string where the second character is a "/" ' do
+		bowling = 	Bowling.new
+		expect(bowling.score("3/")).to eq(10)
+	end
+	it 'returns a score which is a total of the numbers 
+		in the string when provided with a string of numbers only' do
+		bowling = Bowling.new
+		expect(bowling.score("22 35 97")).to eq(28)
+		end
+	
 end

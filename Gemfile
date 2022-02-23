@@ -7,4 +7,6 @@ source "https://rubygems.org"
 gem "rspec", "~> 3.11"
 group :test do
     gem "nyan-cat-formatter"
+    gem "guard"
+    gem "guard-rspec"    
   end

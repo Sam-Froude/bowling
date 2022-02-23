@@ -1,7 +1,10 @@
 class Bowling
 	def score(rolls)
-		return nil if rolls.nil?
-
-		0
+ if rolls.nil?
+	rolls
+ else
+	rolls.to_i
+ end
+		
 	end
 end
